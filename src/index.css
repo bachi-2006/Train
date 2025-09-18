@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Railway Control System Design System
+All colors MUST be HSL for consistency
+*/
+
+@layer base {
+  :root {
+    /* Railway Control Dark Theme */
+    --background: 220 26% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 26% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Railway Steel Blue Primary */
+    --primary: 210 90% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 90% 65%;
+
+    /* Steel Gray Secondary */
+    --secondary: 220 15% 20%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 60%;
+
+    /* Signal Amber Accent */
+    --accent: 45 95% 60%;
+    --accent-foreground: 220 26% 8%;
+
+    /* Safety Colors */
+    --success: 120 60% 50%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 45 95% 60%;
+    --warning-foreground: 220 26% 8%;
+    
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 25%;
+    --input: 220 15% 18%;
+    --ring: 210 90% 55%;
+
+    --radius: 0.75rem;
+
+    /* Railway Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-control: linear-gradient(180deg, hsl(var(--card)), hsl(var(--muted)));
+    --gradient-alert: linear-gradient(45deg, hsl(var(--destructive)), hsl(var(--warning)));
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --pulse-duration: 2s;
+
+    --sidebar-background: 220 20% 12%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono;
+  }
+}
+
+@layer components {
+  /* Railway Control Animations */
+  .pulse-signal {
+    animation: pulse-signal var(--pulse-duration) ease-in-out infinite;
+  }
+  
+  .train-moving {
+    animation: train-move 3s linear infinite;
+  }
+  
+  .status-blink {
+    animation: status-blink 1s ease-in-out infinite alternate;
+  }
+  
+  /* Control Panel Gradients */
+  .gradient-control {
+    background: var(--gradient-control);
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-alert {
+    background: var(--gradient-alert);
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}
+
+@keyframes pulse-signal {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+@keyframes train-move {
+  0% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  100% { transform: translateX(-2px); }
+}
+
+@keyframes status-blink {
+  0% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
