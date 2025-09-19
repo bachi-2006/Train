@@ -1,0 +1,29 @@
+{
+  "trains": [
+    {
+      "train_id": "T1",
+      "train_type": "Passenger",
+      "priority_level": "medium",
+      "route_path": ["M", "N", "O"],
+      "alternative_route_path": null
+    },
+    {
+      "train_id": "T2",
+      "train_type": "Passenger",
+      "priority_level": "High",
+      "route_path": ["M", "N", "O"],
+      "alternative_route_path": null
+    }
+  ],
+  "sections": [
+    {"from_node": "M", "to_node": "N", "travel_time_min": 5, "availability": "double"},
+    {"from_node": "M", "to_node": "N", "travel_time_min": 7, "availability": "double"}
+  ],
+  "stations": [],
+  "constraints": {
+    "min_headway_min": 2
+  },
+  "simulation": {
+    "num_trains": 2
+  }
+}

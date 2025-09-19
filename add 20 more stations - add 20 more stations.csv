@@ -1,0 +1,61 @@
+Station Code,Station Name,Platform Count,Track Availability,Halt Time (mins),Latitude,Longitude
+HYB,Hyderabad Deccan (Nampally),10,Y,5
+HYB,Hyderabad Deccan (Nampally),10,Y,5,17.3840,78.4676
+KCG,Kacheguda Junction,6,Y,3
+KCG,Kacheguda Junction,6,Y,3,17.3849,78.5011
+SC,Secunderabad Junction,8,Y,5
+SC,Secunderabad Junction,8,Y,5,17.4399,78.4983
+BZA,Vijayawada Junction,10,Y,6
+BZA,Vijayawada Junction,10,Y,6,16.5182,80.6185
+RJY,Rajahmundry,6,Y,4
+RJY,Rajahmundry,6,Y,4,17.0005,81.8040
+SLO,Samalkot Junction,4,Y,3
+SLO,Samalkot Junction,4,Y,3,17.0536,82.1762
+VSKP,Visakhapatnam Junction,12,Y,7
+VSKP,Visakhapatnam Junction,12,Y,7,17.7221,83.3018
+VZM,Vizianagaram Junction,6,Y,5
+VZM,Vizianagaram Junction,6,Y,5,18.1164,83.4090
+CSMT,Mumbai CSMT,18,Y,10
+CSMT,Mumbai CSMT,18,Y,10,18.9402,72.8356
+KRNT,Kurnool Town,5,Y,6
+KRNT,Kurnool Town,5,Y,6,15.8337,78.0550
+NDLS,New Delhi,16,Y,10
+NDLS,New Delhi,16,Y,10,28.6417,77.2197
+HWH,Howrah Junction,23,Y,15
+HWH,Howrah Junction,23,Y,15,22.5850,88.3468
+CNB,Kanpur Central,10,Y,5
+CNB,Kanpur Central,10,Y,5,26.4478,80.3506
+PNBE,Patna Junction,10,Y,5
+PNBE,Patna Junction,10,Y,5,25.6090,85.1415
+KYN,Kalyan Junction,8,Y,5
+KYN,Kalyan Junction,8,Y,5,19.2437,73.1305
+PRYJ,Prayagraj Junction,10,Y,5
+PRYJ,Prayagraj Junction,10,Y,5,25.4358,81.8463
+ET,Itarsi Junction,7,Y,5
+ET,Itarsi Junction,7,Y,5,22.6148,77.7628
+BRC,Vadodara Junction,7,Y,5
+BRC,Vadodara Junction,7,Y,5,22.3102,73.1812
+LKO,Lucknow Charbagh,9,Y,5
+LKO,Lucknow Charbagh,9,Y,5,26.8300,80.9220
+BPL,Bhopal Junction,6,Y,5
+BPL,Bhopal Junction,6,Y,5,23.2547,77.4019
+NGP,Nagpur Junction,8,Y,5
+NGP,Nagpur Junction,8,Y,5,21.1500,79.0890
+JP,Jaipur Junction,7,Y,5
+JP,Jaipur Junction,7,Y,5,26.9270,75.7986
+MAS,Chennai Central,17,Y,10
+MAS,Chennai Central,17,Y,10,13.0820,80.2757
+SBC,Bangalore City,10,Y,5
+SBC,Bangalore City,10,Y,5,12.9766,77.5692
+PUNE,Pune Junction,6,Y,5
+PUNE,Pune Junction,6,Y,5,18.5286,73.8748
+ADI,Ahmedabad Junction,12,Y,5
+ADI,Ahmedabad Junction,12,Y,5,23.0268,72.6009
+ST,Surat,4,Y,5
+ST,Surat,4,Y,5,21.1950,72.8367
+BSB,Varanasi Junction,9,Y,5
+BSB,Varanasi Junction,9,Y,5,25.3207,82.9873
+AGC,Agra Cantt,6,Y,5
+AGC,Agra Cantt,6,Y,5,27.1605,78.0081
+JHS,Jhansi Junction,7,Y,5
+JHS,Jhansi Junction,7,Y,5,25.4486,78.5685

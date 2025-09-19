@@ -1,0 +1,68 @@
+{
+  "trains": [
+    {
+      "train_id": "EXP205",
+      "name": "Express 205",
+      "train_type": "Passenger",
+      "priority_level": "High",
+      "speed_kmph": 90,
+      "length_m": 200,
+      "sched_departure": "09:00",
+      "sched_arrival": "10:00",
+      "source": "A",
+      "destination": "C",
+      "route_path": ["A", "B", "C"]
+    },
+    {
+      "train_id": "FRT309",
+      "name": "Freight 309",
+      "train_type": "Freight",
+      "priority_level": "Low",
+      "speed_kmph": 40,
+      "length_m": 600,
+      "sched_departure": "09:02",
+      "sched_arrival": "10:30",
+      "source": "B",
+      "destination": "C",
+      "route_path": ["B", "C"]
+    },
+    {
+      "train_id": "VandeBharath",
+      "name": "Vande Bharath",
+      "train_type": "Passenger",
+      "priority_level": "Low",
+      "speed_kmph": 110,
+      "length_m": 240,
+      "sched_departure": "09:01",
+      "sched_arrival": "09:50",
+      "source": "A",
+      "destination": "C",
+      "route_path": ["A", "B", "C"]
+    }
+  ],
+  "sections": [
+    {"from_node": "A", "to_node": "B", "travel_time_min": 5.0, "availability": "single", "section_capacity": 1, "signalling": "Automatic Block"},
+    {"from_node": "B", "to_node": "C", "travel_time_min": 5.0, "availability": "single", "section_capacity": 1, "signalling": "Automatic Block"},
+    {"from_node": "A", "to_node": "D", "travel_time_min": 6.0, "availability": "double", "section_capacity": 2, "signalling": "CTC"},
+    {"from_node": "D", "to_node": "C", "travel_time_min": 5.0, "availability": "double", "section_capacity": 2, "signalling": "CTC"}
+  ],
+  "stations": [
+    {"station_id": "A", "platform_count": 2, "platform_length_m": 250, "halt_time_min": 2.0, "station_priority": "major_junction"},
+    {"station_id": "B", "platform_count": 2, "platform_length_m": 300, "halt_time_min": 2.0, "station_priority": "small_station"},
+    {"station_id": "C", "platform_count": 3, "platform_length_m": 350, "halt_time_min": 0.0, "station_priority": "major_junction"}
+  ],
+  "constraints": {
+    "min_headway_min": 2.0,
+    "allow_overtake": true,
+    "crossing_rule": "passenger_first",
+    "track_conflict_rule": "single_line_opposite_forbidden"
+  },
+  "simulation": {
+    "simulation_speed": "realtime",
+    "num_trains": 3,
+    "scenario_type": "normal",
+    "optimization_goal": "prioritize_passenger"
+  }
+}
+
+

@@ -12,54 +12,30 @@ interface TrainConflict {
   timeToConflict: number;
   severity: 'high' | 'medium' | 'low';
   suggestedAction: string;
+  registered?: boolean;
+}
+
+interface AIRecommendation {
+  id: string;
+  description: string;
+  impact: string;
+  confidence: number;
 }
 
 interface ConflictCheckerProps {
-  trains: any[];
+  conflicts: TrainConflict[];
+  onRegisterConflict: (conflictId: string) => void;
+  onRunSimulator: () => void;
   isSimulating: boolean;
+  aiRecommendations: AIRecommendation[];
+  onConfirmConflict: (conflictId: string) => void;
+  confirmedConflicts: Set<string>;
+  analysisText?: string;
+  analysisStruct?: any;
 }
 
-const ConflictChecker: React.FC<ConflictCheckerProps> = ({ trains, isSimulating }) => {
-  const [conflicts, setConflicts] = useState<TrainConflict[]>([
-    {
-      id: 'C001',
-      trainA: 'Express Mumbai',
-      trainB: 'Local Delhi',
-      conflictPoint: 'Junction B',
-      timeToConflict: 4.2,
-      severity: 'high',
-      suggestedAction: 'Hold Local Delhi for 3 minutes'
-    },
-    {
-      id: 'C002',
-      trainA: 'Freight Cargo',
-      trainB: 'Local Delhi',
-      conflictPoint: 'Platform 2',
-      timeToConflict: 8.5,
-      severity: 'medium',
-      suggestedAction: 'Reroute Freight to Platform 3'
-    }
-  ]);
-
+const ConflictChecker: React.FC<ConflictCheckerProps> = ({ conflicts, onRegisterConflict, onRunSimulator, isSimulating, aiRecommendations, onConfirmConflict, confirmedConflicts, analysisText, analysisStruct }) => {
   const [resolvedConflicts, setResolvedConflicts] = useState(0);
-
-  useEffect(() => {
-    if (!isSimulating) return;
-    
-    const interval = setInterval(() => {
-      setConflicts(prev => prev.map(conflict => ({
-        ...conflict,
-        timeToConflict: Math.max(0, conflict.timeToConflict - 0.1)
-      })).filter(conflict => conflict.timeToConflict > 0));
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [isSimulating]);
-
-  const handleResolveConflict = (id: string) => {
-    setConflicts(prev => prev.filter(c => c.id !== id));
-    setResolvedConflicts(prev => prev + 1);
-  };
 
   const getSeverityColor = (severity: string) => {
     switch (severity) {
@@ -69,6 +45,8 @@ const ConflictChecker: React.FC<ConflictCheckerProps> = ({ trains, isSimulating 
       default: return 'outline';
     }
   };
+
+  const allRegistered = conflicts.length > 0 && conflicts.every(c => c.registered);
 
   return (
     <Card className="gradient-control border-border">
@@ -121,13 +99,31 @@ const ConflictChecker: React.FC<ConflictCheckerProps> = ({ trains, isSimulating 
                   </div>
                   
                   <div className="flex gap-2">
-                    <Button 
-                      size="sm" 
-                      onClick={() => handleResolveConflict(conflict.id)}
-                      className="flex-1 bg-success hover:bg-success/90"
-                    >
-                      Apply Solution
-                    </Button>
+                    {!conflict.registered ? (
+                      <Button 
+                        size="sm" 
+                        onClick={() => onRegisterConflict(conflict.id)}
+                        className="flex-1 bg-primary hover:bg-primary/90"
+                      >
+                        Register Conflict
+                      </Button>
+                    ) : !confirmedConflicts.has(conflict.id) ? (
+                      <Button
+                        size="sm"
+                        onClick={() => onConfirmConflict(conflict.id)}
+                        className="flex-1 bg-warning hover:bg-warning/90"
+                      >
+                        Confirm Registration
+                      </Button>
+                    ) : (
+                      <Button 
+                        size="sm" 
+                        disabled
+                        className="flex-1 bg-success"
+                      >
+                        Confirmed
+                      </Button>
+                    )}
                     <Button size="sm" variant="outline" className="flex-1">
                       Override
                     </Button>
@@ -136,10 +132,62 @@ const ConflictChecker: React.FC<ConflictCheckerProps> = ({ trains, isSimulating 
               </div>
             ))
           )}
+
+          {allRegistered && (
+            <div className="mt-4 flex justify-center">
+              <Button onClick={onRunSimulator} className="w-48">
+                Run Simulator
+              </Button>
+            </div>
+          )}
+
+          {aiRecommendations.length > 0 && (
+            <div className="mt-6 p-4 border border-border rounded-lg bg-card/50">
+              <h3 className="text-lg font-semibold mb-2">AI Recommendations</h3>
+              <ul className="list-disc list-inside space-y-2 text-sm">
+                {aiRecommendations.map(rec => (
+                  <li key={rec.id}>
+                    <span className="font-medium">{rec.description}</span> - Impact: {rec.impact} (Confidence: {rec.confidence}%)
+                  </li>
+                ))}
+              </ul>
+              {analysisText && (
+                <div className="mt-4 p-3 bg-muted/30 rounded text-sm whitespace-pre-wrap">
+                  {analysisText}
+                </div>
+              )}
+              {analysisStruct && (
+                <div className="mt-4 p-3 bg-muted/30 rounded text-sm">
+                  <div className="font-medium mb-1">Detailed Analysis</div>
+                  <div className="space-y-2">
+                    <div>
+                      <div className="text-xs font-semibold">Conflicts & Decisions</div>
+                      <ul className="list-disc list-inside text-xs">
+                        {(analysisStruct.conflicts_and_decisions || []).map((c: any, i: number) => (
+                          <li key={i}>{c.block}: {c.trains?.join(' vs ')} → {JSON.stringify(c.decision)}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="text-xs"><span className="font-semibold">Reasoning:</span> {analysisStruct.reasoning}</div>
+                    <div className="text-xs"><span className="font-semibold">Rerouting/Staggering:</span> {analysisStruct.rerouting_or_staggering}</div>
+                    <div className="text-xs"><span className="font-semibold">KPI impact:</span> throughput {analysisStruct.kpi_impact?.throughput}, delay {analysisStruct.kpi_impact?.average_delay}, safety {analysisStruct.kpi_impact?.safety}</div>
+                    <div>
+                      <div className="text-xs font-semibold">Event log</div>
+                      <ul className="list-disc list-inside text-xs">
+                        {(analysisStruct.event_log || []).map((l: string, i: number) => (<li key={i}>{l}</li>))}
+                      </ul>
+                    </div>
+                    <div className="text-xs"><span className="font-semibold">Fairness:</span> {analysisStruct.fairness}</div>
+                    <div className="text-xs"><span className="font-semibold">Optimization:</span> {analysisStruct.optimization_strategy}</div>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </CardContent>
     </Card>
   );
-};
+}
 
 export default ConflictChecker;

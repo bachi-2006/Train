@@ -1,0 +1,31 @@
+Station Code,Station Name,Platform Count,Halt Time (mins),Latitude,Longitude
+HYB,Hyderabad Deccan (Nampally),10,5.0,17.384,78.4676
+KCG,Kacheguda Junction,6,3.0,17.3849,78.5011
+SC,Secunderabad Junction,8,5.0,17.4399,78.4983
+BZA,Vijayawada Junction,10,6.0,16.5182,80.6185
+RJY,Rajahmundry,6,4.0,17.0005,81.804
+SLO,Samalkot Junction,4,3.0,17.0536,82.1762
+VSKP,Visakhapatnam Junction,12,7.0,17.7221,83.3018
+VZM,Vizianagaram Junction,6,5.0,18.1164,83.409
+CSMT,Mumbai CSMT,18,10.0,18.9402,72.8356
+KRNT,Kurnool Town,5,6.0,15.8337,78.055
+NDLS,New Delhi,16,10.0,28.6417,77.2197
+HWH,Howrah Junction,23,15.0,22.585,88.3468
+CNB,Kanpur Central,10,5.0,26.4478,80.3506
+PNBE,Patna Junction,10,5.0,25.609,85.1415
+KYN,Kalyan Junction,8,5.0,19.2437,73.1305
+PRYJ,Prayagraj Junction,10,5.0,25.4358,81.8463
+ET,Itarsi Junction,7,5.0,22.6148,77.7628
+BRC,Vadodara Junction,7,5.0,22.3102,73.1812
+LKO,Lucknow Charbagh,9,5.0,26.83,80.922
+BPL,Bhopal Junction,6,5.0,23.2547,77.4019
+NGP,Nagpur Junction,8,5.0,21.15,79.089
+JP,Jaipur Junction,7,5.0,26.927,75.7986
+MAS,Chennai Central,17,10.0,13.082,80.2757
+SBC,Bangalore City,10,5.0,12.9766,77.5692
+PUNE,Pune Junction,6,5.0,18.5286,73.8748
+ADI,Ahmedabad Junction,12,5.0,23.0268,72.6009
+ST,Surat,4,5.0,21.195,72.8367
+BSB,Varanasi Junction,9,5.0,25.3207,82.9873
+AGC,Agra Cantt,6,5.0,27.1605,78.0081
+JHS,Jhansi Junction,7,5.0,25.4486,78.5685

@@ -64,6 +64,28 @@ This project is built with:
 
 Simply open [Lovable](https://lovable.dev/projects/c670446f-664c-4fc8-ad5a-9a113c176da6) and click on Share -> Publish.
 
+## Local development (frontend + backend)
+
+Frontend
+- Node.js 18+
+- Install: `npm i`
+- Run: `npm run dev` (defaults to http://localhost:5173)
+
+Backend
+- Python 3.10+
+- Install deps: `pip install -r requirements.txt`
+- Run: `uvicorn api:app --reload --port 8000`
+
+Environment
+- Create a `.env` (or export in shell) for optional services:
+  - `GEMINI_API_KEY=your_key`
+
+Data files
+- Ensure CSVs exist in repo root:
+  - `with connecting junction - with connecting junction.csv`
+  - `form every station to every station - form every station to every station.csv`
+  - `add 20 more stations - add 20 more stations.csv`
+
 ## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!

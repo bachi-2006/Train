@@ -1,0 +1,11 @@
+Station Code,Station Name,Platform Count,Track Availability,Halt Time (mins),Connecting Junction
+HYB,Hyderabad Deccan (Nampally),10,Y,5,N
+KCG,Kacheguda Junction,6,Y,3,Y
+SC,Secunderabad Junction,8,Y,5,Y
+BZA,Vijayawada Junction,10,Y,6,Y
+RJY,Rajahmundry,6,Y,4,N
+SLO,Samalkot Junction,4,Y,3,Y
+VSKP,Visakhapatnam Junction,12,Y,7,Y
+VZM,Vizianagaram Junction,6,Y,5,Y
+CSMT,Mumbai CSMT,18,Y,10,N
+KRNT,Kurnool Town,5,Y,6,N

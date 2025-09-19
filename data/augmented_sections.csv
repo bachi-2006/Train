@@ -1,0 +1,96 @@
+From Station Code,From Station Name,To Station Code,To Station Name,Distance (km),Average Travel Time (mins),Leg Type
+HYB,Hyderabad Deccan (Nampally),VSKP,Visakhapatnam Junction,700.0,764.0,real
+CSMT,Mumbai CSMT,BZA,Vijayawada Junction,1100.0,1200.0,real
+SC,Secunderabad Junction,VZM,Vizianagaram Junction,724.0,790.0,real
+KRNT,Kurnool Town,RJY,Rajahmundry,568.0,620.0,real
+KCG,Kacheguda Junction,SLO,Samalkot Junction,518.0,565.0,real
+HYB,Hyderabad Deccan (Nampally),KCG,Kacheguda Junction,3.556,3.0,inferred
+HYB,Hyderabad Deccan (Nampally),SC,Secunderabad Junction,7.018,6.0,inferred
+HYB,Hyderabad Deccan (Nampally),KRNT,Kurnool Town,177.903,152.5,inferred
+KCG,Kacheguda Junction,HYB,Hyderabad Deccan (Nampally),3.556,3.0,inferred
+KCG,Kacheguda Junction,SC,Secunderabad Junction,6.123,5.2,inferred
+KCG,Kacheguda Junction,KRNT,Kurnool Town,178.915,153.4,inferred
+SC,Secunderabad Junction,KCG,Kacheguda Junction,6.123,5.2,inferred
+SC,Secunderabad Junction,HYB,Hyderabad Deccan (Nampally),7.018,6.0,inferred
+SC,Secunderabad Junction,KRNT,Kurnool Town,184.74,158.3,inferred
+BZA,Vijayawada Junction,RJY,Rajahmundry,137.142,117.6,inferred
+BZA,Vijayawada Junction,SLO,Samalkot Junction,176.19,151.0,inferred
+BZA,Vijayawada Junction,KCG,Kacheguda Junction,244.964,210.0,inferred
+RJY,Rajahmundry,SLO,Samalkot Junction,40.011,34.3,inferred
+RJY,Rajahmundry,BZA,Vijayawada Junction,137.142,117.6,inferred
+RJY,Rajahmundry,VSKP,Visakhapatnam Junction,178.062,152.6,inferred
+SLO,Samalkot Junction,RJY,Rajahmundry,40.011,34.3,inferred
+SLO,Samalkot Junction,VSKP,Visakhapatnam Junction,140.682,120.6,inferred
+SLO,Samalkot Junction,VZM,Vizianagaram Junction,176.186,151.0,inferred
+VSKP,Visakhapatnam Junction,VZM,Vizianagaram Junction,45.287,38.8,inferred
+VSKP,Visakhapatnam Junction,SLO,Samalkot Junction,140.682,120.6,inferred
+VSKP,Visakhapatnam Junction,RJY,Rajahmundry,178.062,152.6,inferred
+VZM,Vizianagaram Junction,VSKP,Visakhapatnam Junction,45.287,38.8,inferred
+VZM,Vizianagaram Junction,SLO,Samalkot Junction,176.186,151.0,inferred
+VZM,Vizianagaram Junction,RJY,Rajahmundry,210.588,180.5,inferred
+CSMT,Mumbai CSMT,KYN,Kalyan Junction,45.816,39.3,inferred
+CSMT,Mumbai CSMT,PUNE,Pune Junction,118.616,101.7,inferred
+CSMT,Mumbai CSMT,ST,Surat,250.722,214.9,inferred
+KRNT,Kurnool Town,HYB,Hyderabad Deccan (Nampally),177.903,152.5,inferred
+KRNT,Kurnool Town,KCG,Kacheguda Junction,178.915,153.4,inferred
+KRNT,Kurnool Town,SC,Secunderabad Junction,184.74,158.3,inferred
+NDLS,New Delhi,AGC,Agra Cantt,182.012,156.0,inferred
+NDLS,New Delhi,JP,Jaipur Junction,236.421,202.6,inferred
+NDLS,New Delhi,JHS,Jhansi Junction,379.342,325.2,inferred
+HWH,Howrah Junction,PNBE,Patna Junction,467.843,401.0,inferred
+HWH,Howrah Junction,BSB,Varanasi Junction,623.72,534.6,inferred
+HWH,Howrah Junction,VZM,Vizianagaram Junction,715.326,613.1,inferred
+CNB,Kanpur Central,LKO,Lucknow Charbagh,70.933,60.8,inferred
+CNB,Kanpur Central,PRYJ,Prayagraj Junction,187.159,160.4,inferred
+CNB,Kanpur Central,JHS,Jhansi Junction,209.981,180.0,inferred
+PNBE,Patna Junction,BSB,Varanasi Junction,218.625,187.4,inferred
+PNBE,Patna Junction,PRYJ,Prayagraj Junction,331.206,283.9,inferred
+PNBE,Patna Junction,LKO,Lucknow Charbagh,442.236,379.1,inferred
+KYN,Kalyan Junction,CSMT,Mumbai CSMT,45.816,39.3,inferred
+KYN,Kalyan Junction,PUNE,Pune Junction,111.6,95.7,inferred
+KYN,Kalyan Junction,ST,Surat,219.129,187.8,inferred
+PRYJ,Prayagraj Junction,BSB,Varanasi Junction,115.342,98.9,inferred
+PRYJ,Prayagraj Junction,LKO,Lucknow Charbagh,180.407,154.6,inferred
+PRYJ,Prayagraj Junction,CNB,Kanpur Central,187.159,160.4,inferred
+ET,Itarsi Junction,BPL,Bhopal Junction,80.179,68.7,inferred
+ET,Itarsi Junction,NGP,Nagpur Junction,212.728,182.3,inferred
+ET,Itarsi Junction,JHS,Jhansi Junction,325.551,279.0,inferred
+BRC,Vadodara Junction,ADI,Ahmedabad Junction,99.471,85.3,inferred
+BRC,Vadodara Junction,ST,Surat,129.008,110.6,inferred
+BRC,Vadodara Junction,KYN,Kalyan Junction,341.02,292.3,inferred
+LKO,Lucknow Charbagh,CNB,Kanpur Central,70.933,60.8,inferred
+LKO,Lucknow Charbagh,PRYJ,Prayagraj Junction,180.407,154.6,inferred
+LKO,Lucknow Charbagh,BSB,Varanasi Junction,265.914,227.9,inferred
+BPL,Bhopal Junction,ET,Itarsi Junction,80.179,68.7,inferred
+BPL,Bhopal Junction,JHS,Jhansi Junction,271.063,232.3,inferred
+BPL,Bhopal Junction,NGP,Nagpur Junction,291.433,249.8,inferred
+NGP,Nagpur Junction,ET,Itarsi Junction,212.728,182.3,inferred
+NGP,Nagpur Junction,BPL,Bhopal Junction,291.433,249.8,inferred
+NGP,Nagpur Junction,SC,Secunderabad Junction,417.174,357.6,inferred
+JP,Jaipur Junction,AGC,Agra Cantt,220.354,188.9,inferred
+JP,Jaipur Junction,NDLS,New Delhi,236.421,202.6,inferred
+JP,Jaipur Junction,JHS,Jhansi Junction,321.562,275.6,inferred
+MAS,Chennai Central,SBC,Bangalore City,293.434,251.5,inferred
+MAS,Chennai Central,BZA,Vijayawada Junction,383.861,329.0,inferred
+MAS,Chennai Central,KRNT,Kurnool Town,388.305,332.8,inferred
+SBC,Bangalore City,MAS,Chennai Central,293.434,251.5,inferred
+SBC,Bangalore City,KRNT,Kurnool Town,321.973,276.0,inferred
+SBC,Bangalore City,HYB,Hyderabad Deccan (Nampally),499.468,428.1,inferred
+PUNE,Pune Junction,KYN,Kalyan Junction,111.6,95.7,inferred
+PUNE,Pune Junction,CSMT,Mumbai CSMT,118.616,101.7,inferred
+PUNE,Pune Junction,ST,Surat,315.737,270.6,inferred
+ADI,Ahmedabad Junction,BRC,Vadodara Junction,99.471,85.3,inferred
+ADI,Ahmedabad Junction,ST,Surat,205.13,175.8,inferred
+ADI,Ahmedabad Junction,KYN,Kalyan Junction,424.231,363.6,inferred
+ST,Surat,BRC,Vadodara Junction,129.008,110.6,inferred
+ST,Surat,ADI,Ahmedabad Junction,205.13,175.8,inferred
+ST,Surat,KYN,Kalyan Junction,219.129,187.8,inferred
+BSB,Varanasi Junction,PRYJ,Prayagraj Junction,115.342,98.9,inferred
+BSB,Varanasi Junction,PNBE,Patna Junction,218.625,187.4,inferred
+BSB,Varanasi Junction,LKO,Lucknow Charbagh,265.914,227.9,inferred
+AGC,Agra Cantt,NDLS,New Delhi,182.012,156.0,inferred
+AGC,Agra Cantt,JHS,Jhansi Junction,198.381,170.0,inferred
+AGC,Agra Cantt,JP,Jaipur Junction,220.354,188.9,inferred
+JHS,Jhansi Junction,AGC,Agra Cantt,198.381,170.0,inferred
+JHS,Jhansi Junction,CNB,Kanpur Central,209.981,180.0,inferred
+JHS,Jhansi Junction,BPL,Bhopal Junction,271.063,232.3,inferred

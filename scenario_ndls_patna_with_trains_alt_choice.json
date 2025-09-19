@@ -1,0 +1,30 @@
+{
+  "trains": [
+    {
+      "train_id": "T1",
+      "name": "Test 1",
+      "train_type": "Passenger",
+      "priority_level": "High",
+      "speed_kmph": 80,
+      "length_m": 400,
+      "sched_departure": "09:00",
+      "sched_arrival": "12:00",
+      "source": "Hyderabad Deccan (Nampally)",
+      "destination": "Visakhapatnam Junction"
+    },
+    {
+      "train_id": "T2",
+      "name": "Test 2",
+      "train_type": "Passenger",
+      "priority_level": "Medium",
+      "speed_kmph": 80,
+      "length_m": 400,
+      "sched_departure": "09:01",
+      "sched_arrival": "12:05",
+      "source": "Hyderabad Deccan (Nampally)",
+      "destination": "Visakhapatnam Junction"
+    }
+  ],
+  "constraints": { "min_headway_min": 2.0 },
+  "simulation": { "num_trains": 2 }
+}
